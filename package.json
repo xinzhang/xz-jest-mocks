@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "name": "example-manual-mocks",
+  "devDependencies": {
+    "jest": "*",
+    "rimraf": "^3.0.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start": "npm run build && node dist/index.js"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}
